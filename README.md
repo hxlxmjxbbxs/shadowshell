@@ -2,8 +2,7 @@
 
 <h2> about </h2>
 
- this is a custom payload generator for powershell,
- which helps to avoid Windows Defender detection  
+ This is a custom payload generator for Powershell that helps avoid detection by Windows Defender  
 
 <h2> how-to </h2>
 
