@@ -2,7 +2,7 @@ import os, random
 
 def menu():
     banner()
-    print("─╼┤payloads├───────────────────────────────────────\n")
+    print("─╼┤architecture├───────────────────────────────────\n")
     print("\t\t(1) macho (osx)")
     print("\t\t(2) powershell (win)\n")
     mode = input("─╼┤selection├─> ")
