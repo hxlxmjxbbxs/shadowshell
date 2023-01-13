@@ -7,11 +7,9 @@ please keep in mind to use this tool for educational purposes only
 <img src="banner.png" width="80%"/>
  
 
- 1) dependencies
+ 1) requirements
 
-         msfconsole
-
-         msfvenom
+         metasploit framework (msfconsole/msfvenom)
 
          python3
 
