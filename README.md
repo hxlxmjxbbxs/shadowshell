@@ -1,6 +1,6 @@
 <h1>SHADOWSHELL</h1>
 
-this is a custom payload generator for silent reverse tcp shells 
+custom payload generator for silent reverse tcp shells 
 
 please keep in mind to use this tool for educational purposes only 
 
