@@ -16,9 +16,7 @@
 
  2) setup
 
-         set HOST and PORT in templates before use
-
-	 set HOST and PORT in handler config before use
+         set HOST and PORT in templates and handler config before use
 
  3) run
 
