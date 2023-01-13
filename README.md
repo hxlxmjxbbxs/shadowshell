@@ -1,5 +1,7 @@
 <h1>SHADOWSHELL</h1>
 
+<img src="banner.png" width="50%"/>
+
 <h2> about </h2>
 
  This is a custom payload generator for Powershell that helps avoid detection by Windows Defender  
