@@ -77,7 +77,7 @@ def banner():
 	banner = [S,H,A,D,O,W,S,H,E,L,L]
 	final = []
 	print('\r')
-	init_color = random.randint(10,15)
+	init_color = random.randint(10,40)
 	txt_color = init_color
 	cl = 0
 
