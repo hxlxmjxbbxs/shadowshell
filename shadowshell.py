@@ -25,7 +25,7 @@ def payloadGenerator(mode):
 	    os.system(command)
         
     elif mode == "2":
-        print("─╼┤TEMPLATES├──────────────────────────────────────\n")
+        print("────╼┤TEMPLATES├──────────────────────────────────────\n")
         os.system("ls templates")
         template = input("\n────╼┤SELECTION├─> ")
         print("\n")
