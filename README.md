@@ -5,7 +5,7 @@ custom payload generator for silent reverse tcp shells - please keep in mind to 
 <img src="banner.png" width="100%"/>
  
 
- 1) setup
+ <h3>GET STARTED</h3>
 
          install metasploit framework and python3
 
