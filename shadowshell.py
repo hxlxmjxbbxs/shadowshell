@@ -1,7 +1,7 @@
 """
--------------------------------------------------
+----------------------------------------
 # shadowshell - custom payload generator
--------------------------------------------------
+----------------------------------------
 """
 __author__ = "z0nd3rl1ng"
 __version__ = "0.1.1"
@@ -11,8 +11,8 @@ import os, random
 def menu():
     banner()
     print("─╼┤ARCHITECTURE├───────────────────────────────────\n")
-    print("\t\t(1) osx-app")
-    print("\t\t(2) powershell\n")
+    print("\t(1) osx-app payload")
+    print("\t(2) powershell payload\n")
     mode = input("────╼┤SELECTION├─> ")
     payloadGenerator(mode)
 
