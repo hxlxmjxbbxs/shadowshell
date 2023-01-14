@@ -5,18 +5,10 @@ custom payload generator for silent reverse tcp shells - please keep in mind to 
 <img src="banner.png" width="100%"/>
  
 
- 1) requirements
+ 1) setup
 
-         metasploit framework (msfconsole/msfvenom)
+         install metasploit framework and python3
 
-         python3
-
- 2) setup
-
-         set HOST and PORT in templates and handler config before use
-
- 3) run
-
-        sudo python3 shadowshell.py
-
-        
+         set HOST and PORT in TEMPLATE and HANDLER before use
+         
+         sudo python3 shadowshell.py
